@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Simple HTML Page</title>
+    
+    
+    <link rel="stylesheet" type="text/css" href="index.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Simple Diagram visualizer</h1>
+    </header>
+    <main>
+      <div>
+          <p><button id="connect">Get Token</button></p>
+          <p><button id="getProcessDefinitions">Get Process definitions</button></p>
+      </div>
+      <div class="row, flex-container">
+        <div class="column">
+           <div id="processDefinitionDiv"></div>
+        </div>
+        <div class="column">
+          <div id="canvas"></div>
+        </div>
+      </div>
+       
+    </main>
+
+    <!-- <script src="./utils.bundled.js"></script> 
+        <script type="module">
+import { camundaConnect } from './utils.bundled.js';-->
+<script src="./utils.bundled.js"></script>
+
+    
+  </body>
+  </body>
+</html>
