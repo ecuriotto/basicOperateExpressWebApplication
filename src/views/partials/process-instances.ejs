@@ -1,0 +1,27 @@
+<% if (typeof processInstances !== 'undefined') { %>
+<h1>Process Instances</h1>
+<table id="processInstanceTable">
+  <thead>
+    <tr>
+      <th>Key</th>
+      <th>Process Version</th>
+      <th>BPMN Process ID</th>
+      <th>Start Date</th>
+      <th>State</th>
+      <th>Process Definition Key</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% processInstances.forEach(function(processInstance) { %>
+    <tr>
+      <td><%= processInstance.key %></td>
+      <td><%= processInstance.processVersion %></td>
+      <td><%= processInstance.bpmnProcessId %></td>
+      <td><%= processInstance.startDate %></td>
+      <td><%= processInstance.state %></td>
+      <td><%= processInstance.processDefinitionKey %></td>
+    </tr>
+    <% }); %>
+  </tbody>
+</table>
+<% } %>

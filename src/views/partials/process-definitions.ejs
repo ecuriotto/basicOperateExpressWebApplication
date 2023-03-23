@@ -1,0 +1,36 @@
+<table id="processDefinitionTable">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Version</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% processDefinitions.forEach(function(processDefinition) { %>
+    <tr>
+      <td><%= processDefinition.name %></td>
+      <td><%= processDefinition.version %></td>
+      <td>
+        <button
+          id="showInstances"
+          class="get-process-instances-button"
+          data-process-definition-key="<%= processDefinition.key %>"
+        >
+          Get instances
+        </button>
+      </td>
+      <td>
+        <button
+          id="showDiagram"
+          class="get-diagram-button"
+          data-diagram-key="<%= processDefinition.key %>"
+        >
+          Get Diagram
+        </button>
+      </td>
+    </tr>
+    <% }); %>
+  </tbody>
+</table>

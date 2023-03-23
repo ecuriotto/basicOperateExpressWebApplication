@@ -4,13 +4,9 @@
   "description": "",
   "main": "build/index.js",
   "scripts": {
-    "clean": "rimraf build/",
-    "create-build": "mkdirp ./build",
-    "start:build": "npm run build && npm run clean && npm run create-build && npm run copy-public && tsc -w",
-    "start:run": "nodemon build/index.js",
-    "start": "concurrently npm:start:*",
-    "build": "webpack",
-    "copy-public": "cp -R ./src/public/ ./build/public && cp -R ./src/views ./build/views && cp -R ./src/resources ./build/resources"
+    "start:run": "nodemon src/index.js",
+    "start": "webpack && nodemon src/index.js",
+    "start:build": "webpack"
   },
   "keywords": [],
   "author": "",

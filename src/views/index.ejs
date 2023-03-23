@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <title>My Simple HTML Page</title>
     
-    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" type="text/css" href="index.css" />
   </head>
   <body>
@@ -13,18 +13,23 @@
     </header>
     <main>
       <div>
-          <p><button id="connect">Get Token</button></p>
-          <p><button id="getProcessDefinitions">Get Process definitions</button></p>
-      </div>
-      <div class="row, flex-container">
-        <div class="column">
-           <div id="processDefinitionDiv"></div>
+        <div>
+            <p><button id="connect">Get Token</button><div id="snackbar">Connection successful</div></p>
+            <p><button id="getProcessDefinitions">Get Process definitions</button></p>
         </div>
-        <div class="column">
-          <div id="canvas"></div>
+        <div class="row, flex-container">
+          <div class="column">
+            <div id="processDefinitionDiv"></div>
+          </div>
+          <div class="column">
+            <div id="canvas"></div>
+          </div>
         </div>
       </div>
-       
+
+      <div id="process-instances"></div>
+
+
     </main>
 
     <!-- <script src="./utils.bundled.js"></script> 
@@ -34,5 +39,5 @@ import { camundaConnect } from './utils.bundled.js';-->
 
     
   </body>
-  </body>
+
 </html>
