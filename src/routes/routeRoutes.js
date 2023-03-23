@@ -17,9 +17,7 @@ router.get('/connect', async function (req, res) {
 router.get('/processDefinitionIds', async function (req, res) {
   const ci = new CamundaInteract();
   const processDefinitions = await ci.getProcessDefinitionIds(req);
-  console.log(processDefinitions);
   res.render('partials/process-definitions', { processDefinitions: processDefinitions });
-  //res.send(processDefinitions);
 });
 
 router.get('/processInstances/:key', async function (req, res) {

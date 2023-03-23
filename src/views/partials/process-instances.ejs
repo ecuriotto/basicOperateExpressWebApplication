@@ -1,4 +1,4 @@
-<% if (typeof processInstances !== 'undefined') { %>
+<% if (typeof processInstances !== 'undefined') { %> <% if (processInstances.length >0) { %>
 <h1>Process Instances</h1>
 <table id="processInstanceTable">
   <thead>
@@ -21,7 +21,9 @@
       <td><%= processInstance.state %></td>
       <td><%= processInstance.processDefinitionKey %></td>
     </tr>
-    <% }); %>
+    <% }) } else { %>
+    <p>No process instances available</p>
+    <% } %>
   </tbody>
 </table>
 <% } %>

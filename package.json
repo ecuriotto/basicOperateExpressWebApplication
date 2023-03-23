@@ -6,7 +6,8 @@
   "scripts": {
     "start:run": "nodemon src/index.js",
     "start": "webpack && nodemon src/index.js",
-    "start:build": "webpack"
+    "start:build": "webpack",
+    "test": "vitest"
   },
   "keywords": [],
   "author": "",
@@ -30,6 +31,7 @@
     "copyfiles": "^2.4.1",
     "expose-loader": "^4.1.0",
     "rimraf": "^4.4.0",
+    "vitest": "^0.29.7",
     "webpack-cli": "^5.0.1"
   }
 }

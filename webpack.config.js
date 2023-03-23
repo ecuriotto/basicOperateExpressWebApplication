@@ -2,9 +2,7 @@ var path = require('path');
 
 module.exports = {
   mode: 'development',
-  entry: 
-      { utils: './src/public/utils.js' }
-  ,
+  entry: { camundaFunctions: './src/public/camundaFunctions.js' },
   output: {
     path: path.resolve(__dirname, 'src/public'),
     filename: './[name].bundled.js',
@@ -15,8 +13,6 @@ module.exports = {
         test: /\.bpmn$/,
         type: 'asset/source',
       },
-      
     ],
   },
-
 };

@@ -1,13 +1,7 @@
 const axios = require('axios');
 const https = require('https');
 const url = require('url');
-/*
-connection-properties.js should contain your access credentials, like this:
-module.exports = {
-  authUrl : 'https://login.cloud.camunda.io/oauth/token',
-....
-} 
-*/
+
 const config = require('./connection-properties.js');
 
 class CamundaInteract {
@@ -58,6 +52,7 @@ class CamundaInteract {
     });
 
     const processDefinitions = response.data?.items || [];
+    console.log(processDefinitions);
     return processDefinitions;
   }
 
@@ -87,7 +82,7 @@ class CamundaInteract {
         );
 
         const processInstances = response.data?.items || [];
-        //console.log(processInstances);
+        console.log(processInstances);
         return processInstances;
       } else {
         throw new Error('key is null');

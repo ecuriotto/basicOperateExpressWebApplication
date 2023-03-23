@@ -4,15 +4,15 @@
     <meta charset="UTF-8" />
     <title>My Simple HTML Page</title>
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="index.css" />
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">    <link rel="stylesheet" type="text/css" href="index.css" />
   </head>
   <body>
     <header>
       <h1>Simple Diagram visualizer</h1>
     </header>
     <main>
-      <div>
+      <div id="mainDiv">
         <div>
             <p><button id="connect">Get Token</button><div id="snackbar">Connection successful</div></p>
             <p><button id="getProcessDefinitions">Get Process definitions</button></p>
@@ -35,8 +35,7 @@
     <!-- <script src="./utils.bundled.js"></script> 
         <script type="module">
 import { camundaConnect } from './utils.bundled.js';-->
-<script src="./utils.bundled.js"></script>
-
+<script src="./camundaFunctions.bundled.js"></script>
     
   </body>
 
