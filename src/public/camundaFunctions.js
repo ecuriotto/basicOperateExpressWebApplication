@@ -1,4 +1,4 @@
-import { setXml } from './app.js';
+import { showDiagram } from './app.js';
 import { getCookie } from './utils.js';
 
 export const camundaConnect = async () => {
@@ -61,7 +61,7 @@ export async function showProcessDiagram(key) {
   });
   //const xmlResponse2 = await response.xml();
   const xmlData = await xmlResponse.text();
-  setXml(xmlData);
+  showDiagram(xmlData);
 }
 export function createTableEventListeners() {
   const buttonsPI = document.querySelectorAll('.get-process-instances-button');

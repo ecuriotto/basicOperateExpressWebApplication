@@ -1,11 +1,7 @@
-
 const express = require('express');
 const routeRoutes = require('./routes/routeRoutes.js');
 const bodyParser = require('body-parser');
-const cors = require('cors');
 const path = require('path');
-
-
 
 // Create Express app instance
 const app = express();
@@ -13,7 +9,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Middleware
 app.use(bodyParser.json());
-app.use(cors());
 
 //app.use(helmet());
 app.set('view engine', 'ejs');

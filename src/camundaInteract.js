@@ -52,14 +52,12 @@ class CamundaInteract {
     });
 
     const processDefinitions = response.data?.items || [];
-    console.log(processDefinitions);
     return processDefinitions;
   }
 
   async getProcessInstances(req) {
     if (req.url) {
       const key = this.getKeyFromUrl(req.url);
-      console.log(key);
       if (key) {
         const payload = {
           filter: {
@@ -82,7 +80,6 @@ class CamundaInteract {
         );
 
         const processInstances = response.data?.items || [];
-        console.log(processInstances);
         return processInstances;
       } else {
         throw new Error('key is null');

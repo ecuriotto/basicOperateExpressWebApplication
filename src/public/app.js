@@ -2,7 +2,7 @@
 // dependencies via npm install --save bpmn-js
 import BpmnViewer from 'bpmn-js';
 
-export const setXml = (xml) => {
+export const showDiagram = (xml) => {
   emptyCanvas();
 
   var viewer = new BpmnViewer({
